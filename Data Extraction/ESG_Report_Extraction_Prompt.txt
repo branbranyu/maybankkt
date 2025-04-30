@@ -1,0 +1,89 @@
+
+ESG Report Extraction Task: Can you help me scan and extract the ESG metric values from the uploaded company ESG/Sustainability report, and complete a structured Excel file using the format and instructions below.
+
+Important Notes:
+Limit the task to 30 minutes.
+Only give me the final populated table.
+
+Output Format: Completed Excel file named: {Company Name}_Extracted_ESG_Metrics.xlsx
+
+Each row corresponds to one of the 44 predefined ESG metrics and includes the following columns:
+
+| Column Name         | Description                                               |
+|---------------------|-----------------------------------------------------------|
+| Metric Name         | Name from the predefined list            		  |
+| Extracted Value     | Most recent value found			                  |
+| Extracted Text      | Supporting sentence, bullet or table row                  |
+| Remarks             | One tag from the list below                               |
+
+Key Instructions
+1. Start by scanning summary/KPI tables, usually near the end of the report.
+2. Then perform a complete and exhaustive pass through the full report in this order:
+   - Executive summary
+   - ESG strategy or performance sections
+   - Framework disclosures (e.g., GRI, SASB, TCFD, CDP)
+   - Appendices, footnotes, glossary
+3. Extract metrics systematically and individually. Keep track of what's found or missing.
+4. If multiple values are present, prefer:
+   - Most recent reporting year
+   - Summary/KPI tables over scattered narrative
+   - Values with explicit units and clear attribution
+5. Once all 44 metrics are reviewed and populated, output the final Excel file.
+
+Remarks Tagging Guide
+Use one of the following tags for each metric:
+
+| Tag          | Description                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| [Direct]     | Value is explicitly stated (e.g., "Scope 1 emissions: 30,000 tons CO₂e")    |
+| [Inferred]   | Deduced from clear context (e.g., calculated from subtotals)                |
+| [Estimated]  | Approximate from vague data (e.g., estimated from a bar chart)              |
+| [Assumed]    | Based on logical assumption due to missing details                          |
+| [Unavailable]| Metric could not be found or inferred in time                               |
+
+
+ESG Metric List
+1. Fuel Consumption (Mobile Combustion)
+2. Fuel Consumption (Stationary Combustion)
+3. Electricity Consumption
+4. Water Consumption
+5. Waste Disposed (Non-hazardous)
+6. Waste Disposed (Hazardous)
+7. Scope 1 Emissions
+8. Scope 2 Emissions
+9. Emissions Intensity
+10. Current Employee by Age Group - Under 30 years old
+11. Current Employee by Age Group - 30-50 years old
+12. Current Employee by Age Group - Over 50 years old
+13. Current Employee by Age Group - Male
+14. Current Employee by Age Group - Female
+15. Total Number of Current Employees
+16. Total number of new employees hires during the reporting period, by age group - Under 30 years old
+17. Total number of new employees hires during the reporting period, by age group - 30-50 years old
+18. Total number of new employees hires during the reporting period, by age group - Over 50 years old
+19. Total number of new employees hires during the reporting period, by age group - Male
+20. Total number of new employees hires during the reporting period, by age group - Female
+21. Number of fatalities as a result of work-related injury
+22. Number of high-consequence work-related injuries
+23. Number of recordable work-related injuries
+24. Number of recordable work-related ill health cases
+25. Average training hours per employee
+26. Average training hours per male employee
+27. Average training hours per female employee
+28. Type and scope of programs implemented and assistance provided to upgrade employee skills
+29. Number of total employees by gender who received a regular performance and career development review during the reporting period - Male
+30. Number of total employees by gender who received a regular performance and career development review during the reporting period - Female
+31. Operations and suppliers considered to have significant risk for incidents of young workers exposed to hazardous work
+32. Operations and suppliers considered to have significant risk for incidents of child labour either in terms of type of operation (such as manufacturing plant) and supplier or countries or geographic areas with operations and suppliers considered at risk
+33. Measures taken by the organization in the reporting period intended to contribute to the effective abolition of child labour
+34. Operations and suppliers considered to have significant risk for incidents of forced or compulsory labour either in terms of type of operations (such as manufacturing plant) and supplier or countries or geographic areas with operations and suppliers considered at risk
+35. Measures taken by the organization in the reporting period intended to contribute to the elimination of all forms of forced or compulsory labor
+36. Number of Independent Board Directors
+37. Number of Women on the Board of Directors
+38. Do you have an anti-corruption policy set in place?
+39. Total number of operations assessed for risks related to corruption
+40. Significant risks related to corruption identified through the risk assessment
+41. Total number of governance body members that have received training on anti-corruption
+42. Total percentage of governance body members that have received training on anti-corruption
+43. Total number of employees that have received training on anti-corruption
+44. Total percentage of employees that have received training on anti-corruption

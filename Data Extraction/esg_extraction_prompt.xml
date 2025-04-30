@@ -1,0 +1,86 @@
+<ESGReportExtractionTask>
+  <Overview>
+    <Description>Scan and extract ESG metric values from a company ESG/Sustainability report and complete a structured Excel file.</Description>
+    <TimeLimit>30 minutes</TimeLimit>
+    <OutputFormat>{Company Name}_Extracted_ESG_Metrics.xlsx</OutputFormat>
+  </Overview>
+
+  <OutputColumns>
+    <Column name="Metric Name">Name from the predefined list</Column>
+    <Column name="Extracted Value">Most recent value found</Column>
+    <Column name="Extracted Text">Supporting sentence, bullet or table row</Column>
+    <Column name="Remarks">One tag from the tagging guide</Column>
+  </OutputColumns>
+
+  <Instructions>
+    <Step>Start by scanning summary/KPI tables, usually near the end of the report.</Step>
+    <Step>Perform a complete and exhaustive pass through the full report in this order:
+      <SubStep>Executive summary</SubStep>
+      <SubStep>ESG strategy or performance sections</SubStep>
+      <SubStep>Framework disclosures (e.g., GRI, SASB, TCFD, CDP)</SubStep>
+      <SubStep>Appendices, footnotes, glossary</SubStep>
+    </Step>
+    <Step>Extract metrics systematically and individually. Keep track of what's found or missing.</Step>
+    <Step>If multiple values are present, prefer:
+      <SubStep>Most recent reporting year</SubStep>
+      <SubStep>Summary/KPI tables over narrative</SubStep>
+      <SubStep>Values with explicit units and clear attribution</SubStep>
+    </Step>
+    <Step>Output the final Excel file after reviewing all 44 metrics.</Step>
+  </Instructions>
+
+  <RemarksTaggingGuide>
+    <Tag name="Direct">Value is explicitly stated (e.g., "Scope 1 emissions: 30,000 tons CO₂e")</Tag>
+    <Tag name="Inferred">Deduced from clear context (e.g., calculated from subtotals)</Tag>
+    <Tag name="Estimated">Approximate from vague data (e.g., estimated from a bar chart)</Tag>
+    <Tag name="Assumed">Based on logical assumption due to missing details</Tag>
+    <Tag name="Unavailable">Metric could not be found or inferred in time</Tag>
+  </RemarksTaggingGuide>
+
+  <MetricList>
+    <Metric>Fuel Consumption (Mobile Combustion)</Metric>
+    <Metric>Fuel Consumption (Stationary Combustion)</Metric>
+    <Metric>Electricity Consumption</Metric>
+    <Metric>Water Consumption</Metric>
+    <Metric>Waste Disposed (Non-hazardous)</Metric>
+    <Metric>Waste Disposed (Hazardous)</Metric>
+    <Metric>Scope 1 Emissions</Metric>
+    <Metric>Scope 2 Emissions</Metric>
+    <Metric>Emissions Intensity</Metric>
+    <Metric>Current Employee by Age Group - Under 30 years old</Metric>
+    <Metric>Current Employee by Age Group - 30-50 years old</Metric>
+    <Metric>Current Employee by Age Group - Over 50 years old</Metric>
+    <Metric>Current Employee by Age Group - Male</Metric>
+    <Metric>Current Employee by Age Group - Female</Metric>
+    <Metric>Total Number of Current Employees</Metric>
+    <Metric>Total number of new employees hires during the reporting period, by age group - Under 30 years old</Metric>
+    <Metric>Total number of new employees hires during the reporting period, by age group - 30-50 years old</Metric>
+    <Metric>Total number of new employees hires during the reporting period, by age group - Over 50 years old</Metric>
+    <Metric>Total number of new employees hires during the reporting period, by age group - Male</Metric>
+    <Metric>Total number of new employees hires during the reporting period, by age group - Female</Metric>
+    <Metric>Number of fatalities as a result of work-related injury</Metric>
+    <Metric>Number of high-consequence work-related injuries</Metric>
+    <Metric>Number of recordable work-related injuries</Metric>
+    <Metric>Number of recordable work-related ill health cases</Metric>
+    <Metric>Average training hours per employee</Metric>
+    <Metric>Average training hours per male employee</Metric>
+    <Metric>Average training hours per female employee</Metric>
+    <Metric>Type and scope of programs implemented and assistance provided to upgrade employee skills</Metric>
+    <Metric>Number of total employees by gender who received a regular performance and career development review during the reporting period - Male</Metric>
+    <Metric>Number of total employees by gender who received a regular performance and career development review during the reporting period - Female</Metric>
+    <Metric>Operations and suppliers considered to have significant risk for incidents of young workers exposed to hazardous work</Metric>
+    <Metric>Operations and suppliers considered to have significant risk for incidents of child labour</Metric>
+    <Metric>Measures taken by the organization to contribute to the effective abolition of child labour</Metric>
+    <Metric>Operations and suppliers considered to have significant risk for incidents of forced or compulsory labour</Metric>
+    <Metric>Measures taken to contribute to the elimination of all forms of forced or compulsory labor</Metric>
+    <Metric>Number of Independent Board Directors</Metric>
+    <Metric>Number of Women on the Board of Directors</Metric>
+    <Metric>Do you have an anti-corruption policy set in place?</Metric>
+    <Metric>Total number of operations assessed for risks related to corruption</Metric>
+    <Metric>Significant risks related to corruption identified through the risk assessment</Metric>
+    <Metric>Total number of governance body members that have received training on anti-corruption</Metric>
+    <Metric>Total percentage of governance body members that have received training on anti-corruption</Metric>
+    <Metric>Total number of employees that have received training on anti-corruption</Metric>
+    <Metric>Total percentage of employees that have received training on anti-corruption</Metric>
+  </MetricList>
+</ESGReportExtractionTask>
